@@ -1,0 +1,23 @@
+html,
+body {
+  background-color:black;
+  color: #EEE0b1;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+button{
+  background-color: black;
+  color: coral;
+  border: 2px solid coral;
+  padding: 0.8rem;
+  margin-bottom: 2rem;
+}
