@@ -1,6 +1,6 @@
 html,
 body {
-  background-color:black;
+  background-color:coral;
   color: #EEE0b1;
   padding: 0;
   margin: 0;
@@ -15,9 +15,16 @@ body {
 }
 
 button{
+  font-size: 1.5rem;
   background-color: black;
   color: coral;
   border: 2px solid coral;
+  border-radius: 10px;
   padding: 0.8rem;
   margin-bottom: 2rem;
+  padding-inline: 5%;
+}
+
+button:hover{
+  color: #EEE0b1;
 }
