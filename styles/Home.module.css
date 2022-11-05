@@ -1,9 +1,4 @@
 
-
-
-
-
-
 .title a:hover,
 .title a:focus,
 .title a:active {
@@ -15,12 +10,8 @@
   line-height: 1.15;
   font-size: 4rem;
   color: #fff;
- 
-  background: linear-gradient(-45deg, #eb4c1b, #f090b5, #68c2e2, #23d4ab);
+   background: linear-gradient(-45deg, #eb4c1b, #f090b5, #68c2e2, #23d4ab);
   background-size: 400% 400%;
-
-
- 
   -webkit-text-fill-color: transparent ;
   -webkit-background-clip: text;
   animation: change 10s ease-in-out infinite;
