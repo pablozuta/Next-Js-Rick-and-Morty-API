@@ -41,6 +41,26 @@
   font-size: 1.5rem;
 }
 
+.search input{
+  margin-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+@media (max-width:600px){
+  .search input {
+    margin-right: 0;
+    margin-bottom: 0.5rem;
+  }
+  .search input,
+  .search button{
+    width: 100%;
+  }
+}
+
 
 .grid {
  
