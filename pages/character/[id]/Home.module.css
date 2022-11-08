@@ -1,0 +1,28 @@
+.main{
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.profile {
+  width: 24rem;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 1rem;
+  padding: 1.5rem;
+  text-align: left;
+  border: 1px solid palevioletred;
+  border-radius: 10px;
+  align-content: center;
+  justify-content: center;
+  
+ 
+}
+
+.profile-image{
+  width: 20%;
+}
+
+
