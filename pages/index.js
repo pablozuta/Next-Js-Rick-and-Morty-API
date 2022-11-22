@@ -81,13 +81,13 @@ updateResults (prev => {
 
       <main className={styles.main}>
         <h1 className={styles.title}>Rick and Morty <span>WIKI </span> </h1>
-
+      
         <form  className={styles.search} onSubmit={handleOnSubmitSearch}>
-          <input name="query" type="search" />
-          <button>Search</button>
+          <input className={styles.search} name="query" type="search" />
+         <center><button className={styles.boton}>Search</button></center> 
         </form>
 
-       
+      
 
         <ul className={styles.grid}>
           {results.map(result => {
@@ -107,7 +107,7 @@ updateResults (prev => {
         </ul>
         <center><button onClick={handleLoadMore}>Load More</button></center>
       
-          
+      
      
 
       </main>

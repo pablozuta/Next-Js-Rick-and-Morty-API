@@ -142,3 +142,12 @@ flex-direction: column;
     filter: invert(1);
   }
 }
+
+
+.search{
+  font-size: 2rem;
+  padding: 0.5%;
+  width: 30rem;
+  margin: auto;
+  border-radius: 15px;
+ }
