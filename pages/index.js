@@ -1,6 +1,7 @@
 import { useState , useEffect } from 'react';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link';
 
 const defaultEndpoint = 'https://rickandmortyapi.com/api/character/';
 
@@ -95,11 +96,13 @@ updateResults (prev => {
 
             return(
           <li key={id} className={styles.card}>
-          
+            <Link href="/character/[id]" as={`/character/${id}`}>
+         
             <img src={image} alt={`${name} thumb`} className={styles.image}/>
             <h3>Name: {name}</h3>
             <h4>Specie: {species}</h4>
-          
+           
+            </Link>
           </li>
             )
           })}

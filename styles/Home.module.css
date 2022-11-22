@@ -105,6 +105,14 @@ flex-direction: column;
 
  
 }
+.card h3 {
+  color: coral;
+  text-decoration: none;
+}
+.card h4 {
+  color: coral;
+  text-decoration: none;
+}
 
 .card h2 {
   margin: 0 0 1rem 0;
