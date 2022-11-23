@@ -1,4 +1,4 @@
-.main{
+.main {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -11,23 +11,34 @@
   flex-direction: column;
   flex-wrap: wrap;
   list-style: none;
-  margin: 1rem;
+  margin: 0.7rem;
   padding: 1.5rem;
   text-align: left;
   border: 1px solid palevioletred;
   border-radius: 10px;
   align-content: center;
   justify-content: center;
-  
- 
 }
 
-.profile-image{
+.profile-image {
   width: 20%;
 }
 
-.link{
+.link {
   text-align: center;
   list-style: none;
+  text-decoration: none;
+  font-size: 1.5rem;
+  background-color: black;
   color: coral;
+  border: 2px solid coral;
+  border-radius: 10px;
+  padding: 0.5rem;
+  margin-bottom: 0.3rem;
+  padding-inline: 5%;
+
+}
+
+.link:hover{
+  color: #EEE0b1;
 }

@@ -1,10 +1,13 @@
+//se importa lo necesario para la pagina principal
 import { useState , useEffect } from 'react';
 import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 import Link from 'next/link';
 
+//se guarda API url en una variable para facil acceso
 const defaultEndpoint = 'https://rickandmortyapi.com/api/character/';
 
+//se crea y exporta funcion haciendo fetch a url usando getServerSideProps
 export async function getServerSideProps(){
   const res = await fetch(defaultEndpoint);
   const data = await res.json();
@@ -15,6 +18,8 @@ export async function getServerSideProps(){
   }
 }
 
+//se crea componente de la pagina principal del proyecto
+//el componente acepta como props los datos tomados con el fetch a la url
 export default function Home({data}) {
   const {info, results: defaultResults = []} = data;
   const [results, updateResults] = useState(defaultResults);
@@ -35,14 +40,14 @@ export default function Home({data}) {
         current,
         ...nextData.info
       });
- if ( !nextData.info ?.prev){
-updateResults(nextData.results);
-}
+    if ( !nextData.info ?.prev){
+    updateResults(nextData.results);
+    }
 
-updateResults (prev => {
+  updateResults (prev => {
   return [...prev,
   ...nextData.results]
-});
+  });
 
     }
     request();
@@ -72,6 +77,8 @@ updateResults (prev => {
       current:endpoint
     });
   }
+
+  //aca empieza el return de los elementos JSX
    return (
     <div className={styles.container}>
       <Head>
@@ -88,33 +95,31 @@ updateResults (prev => {
          <center><button className={styles.boton}>Search</button></center> 
         </form>
 
-      
+    
+     {/*  aca empieza grid de cards personajes */}
 
-        <ul className={styles.grid}>
-          {results.map(result => {
-            const {id, name, image , species} = result;
+      <ul className={styles.grid}>
+      {results.map(result => {
+      const {id, name, image , species} = result;
 
-            return(
-          <li key={id} className={styles.card}>
-            <Link href="/character/[id]" as={`/character/${id}`}>
-         
-            <img src={image} alt={`${name} thumb`} className={styles.image}/>
-            <h3>Name: {name}</h3>
-            <h4>Specie: {species}</h4>
+      return(
+      <li key={id} className={styles.card}>
+        <Link href="/character/[id]" as={`/character/${id}`}>
+        <img src={image} alt={`${name} thumb`} className={styles.image}/>
+        </Link>
+
+        <h3>Name: {name}</h3>
+        <h4>Specie: {species}</h4>
            
-            </Link>
+           
           </li>
             )
           })}
           
         </ul>
         <center><button onClick={handleLoadMore}>Load More</button></center>
-      
-      
-     
-
+              
       </main>
-
       
     </div>
   )

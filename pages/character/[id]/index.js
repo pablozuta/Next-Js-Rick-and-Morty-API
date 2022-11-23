@@ -17,6 +17,7 @@ export async function getServerSideProps( { query }){
   }
 }
 
+//aca empieza el componente de la pagina personajes
 export default function Character({data}) {
   const {name, image, gender, location, origin, species, status} = data;
     return (

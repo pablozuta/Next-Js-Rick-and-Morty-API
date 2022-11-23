@@ -1,1 +1,1 @@
-NextJs Project using the Rick and Morty API (https://rickandmortyapi.com/)to get characters names and images with page upload using UseState , useEffect and JavaScript Fetch API.
+Next13 Project using the Rick and Morty API (https://rickandmortyapi.com/)to get characters names and images with page upload using UseState , useEffect, CSS modules and JavaScript Fetch API.
